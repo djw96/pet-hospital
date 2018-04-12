@@ -1,8 +1,11 @@
 <template>
+  <div>
+    <h1>{{$route.params.id}}</h1>
     <el-table :data="tableData">
-        <el-table-column prop="id" label="id"></el-table-column>
-        <el-table-column prop="name" label="name"></el-table-column>
+      <el-table-column prop="id" label="id"></el-table-column>
+      <el-table-column prop="name" label="name"></el-table-column>
     </el-table>
+  </div>
 </template>
 <script>
 export default {
@@ -11,7 +14,7 @@ export default {
       tableData: [
         {
           id: 1,
-          name: 'djw'
+          name: 'djw1'
         },
         {
           id: 2,
