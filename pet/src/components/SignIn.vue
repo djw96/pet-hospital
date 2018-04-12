@@ -114,10 +114,10 @@ export default {
           this.$ajax({
             url: 'http://localhost:8080/register',
             method: 'POST',
-            data: {
+            data: this.$qs.stringify({
               username: this.UserName,
               password: this.PassWord
-            }
+            })
           }).then(response => {
             alert(response.data.msg)
           })
