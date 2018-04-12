@@ -6,6 +6,7 @@ import Ele from '@/components/Ele'
 import Case from '@/components/Case'
 import CaseEntity from '@/components/CaseEntity'
 import cosplay from '@/components/cosplay'
+import SpecCase from '@/components/SpecCase'
 
 Vue.use(Router)
 
@@ -30,6 +31,10 @@ export default new Router({
     {
       path: '/case',
       component: Case
+    },
+    {
+      path: '/speccase/:caseName/:exam/:symptom/:method/:result',
+      component: SpecCase
     },
     {
       path: '/cosplay',

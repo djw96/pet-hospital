@@ -1,10 +1,10 @@
 <template>
-    <div>
-        <el-table :data="allCategory" @row-click="caseClick" :default-sort="{prop:'categoryId'}" stripe>
-            <el-table-column prop="categoryId" label="ID"></el-table-column>
-            <el-table-column prop="categoryName" label="Name"></el-table-column>
-        </el-table>
-    </div>
+  <div>
+    <el-table :data="allCategory" @row-click="caseClick" :default-sort="{prop:'categoryId'}" stripe>
+      <el-table-column prop="categoryId" label="ID"></el-table-column>
+      <el-table-column prop="categoryName" label="Name"></el-table-column>
+    </el-table>
+  </div>
 </template>
 <script>
 export default {
@@ -13,7 +13,7 @@ export default {
       allCategory: [
         {
           categoryId: 1,
-          categoryName: 'erg'
+          categoryName: '1'
         }
       ]
     }
