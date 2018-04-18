@@ -16,7 +16,7 @@
           <div class="col-md-1 col-md-offset-4">
             <button class="button button-small button-plain button-border button-circle" id="back">
               <i class="glyphicon glyphicon-circle-arrow-left"></i>Back</button>
-            <button class="button button-small button-plain button-border button-circle" id="logout">
+            <button class="button button-small button-plain button-border button-circle" id="logout" @click="LogoutClicked">
               <i class="glyphicon glyphicon-share"></i>Logout</button>
           </div>
         </div>
@@ -28,7 +28,18 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  methods: {
+    LogoutClicked() {
+      sessionStorage.removeItem('username')
+      this.$alert('您已退出系统', '系统提示', {
+              confirmButtonText: '确定',
+              callback: action => {
+                this.$router.push({ path: '/' })
+              }
+            })
+    }
+  }
 }
 </script>
 

@@ -43,7 +43,7 @@
               <input type="checkbox" value="remember-me"> 记住密码
             </label>
           </div>
-          <button class="btn btn-lg btn-primary btn-block" type="submit" id="login" @click="LoginClicked">登录</button>
+          <button class="btn btn-lg btn-primary btn-block" type="button" id="login" @click="LoginClicked">登录</button>
         </form>
 
         <!-- 注册弹窗 -->
@@ -81,10 +81,10 @@
                   </div>
                   <div class="form-group">
                     <div class="col-sm-offset-4 col-sm-4">
-                      <button type="submit" class="btn btn-success btn-block" @click="SignClicked">注册</button>
+                      <button type="button" class="btn btn-success btn-block" @click="SignClicked">注册</button>
                     </div>
                     <div class="col-sm-4">
-                      <button type="submit" class="btn btn-danger btn-block">取消</button>
+                      <button type="button" class="btn btn-danger btn-block">取消</button>
                     </div>
                   </div>
                 </form>
@@ -135,6 +135,17 @@ export default {
       })
         .then(response => {
           console.log(response.data.msg)
+          if (response.data.retCode === '0000') {
+            sessionStorage.setItem('username', this.LogUser)
+            document.getElementById('username').value = ''
+            document.getElementById('password').value = ''
+            this.$alert('登陆成功', '登陆提示', {
+              confirmButtonText: '确定',
+              callback: action => {
+                this.$router.push({ path: '/index' })
+              }
+            })
+          }
         })
         .catch(function(error) {
           console.log(error)

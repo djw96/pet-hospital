@@ -258,8 +258,8 @@ button:focus {
 }
 
 .level--current::after {
-    -webkit-transform: rotateZ(-20deg) rotateZ(45deg) rotateX(-70deg) translateZ(5vmin) translateX(5vmin) translateY(-10vmin);
-    transform: rotateZ(-20deg) rotateZ(45deg) rotateX(-70deg) translateZ(5vmin) translateX(5vmin) translateY(-10vmin);
+    -webkit-transform: rotateZ(0deg) rotateZ(45deg) rotateX(-70deg) translateZ(5vmin) translateX(5vmin) translateY(-10vmin);
+    transform: rotateZ(0deg) rotateZ(45deg) rotateX(-70deg) translateZ(5vmin) translateX(5vmin) translateY(-10vmin);
 }
 
 .level--1::after {
@@ -358,9 +358,9 @@ button:focus {
 /* Current level */
 
 .level.level--current {
-    -webkit-transform: translateZ(15vmin) rotate3d(0, 0, 1, 20deg);
+    -webkit-transform: translateZ(15vmin) rotate3d(0, 0, 1, 0deg);
     /* go to center */
-    transform: translateZ(15vmin) rotate3d(0, 0, 1, 20deg);
+    transform: translateZ(15vmin) rotate3d(0, 0, 1, 0deg);
 }
 
 /* Navigation classes */
@@ -464,10 +464,18 @@ button:focus {
     fill: #a2bbdd;
 }
 
+.map_house_left {
+    fill: lightslategrey;
+}
+
+.map_house_right {
+    fill: lightsteelblue;
+}
+
 .map__space {
     -webkit-transition: fill-opacity 0.8s;
     transition: fill-opacity 0.8s;
-    fill: #bdbdbd;
+    fill: lightgrey;
     fill-opacity: 0.6;
 }
 
@@ -769,8 +777,8 @@ button:focus {
     width: 5.5vmin;
     height: 8.25vmin;
     margin: -8.25vmin 0 0 -2.25vmin; /* let the bottom tip be the reference point for individual coordinates */
-    -webkit-transform: rotateZ(-20deg) rotateZ(45deg) rotateX(-70deg);
-    transform: rotateZ(-20deg) rotateZ(45deg) rotateX(-70deg);
+    -webkit-transform: rotateZ(0deg) rotateZ(45deg) rotateX(-70deg);
+    transform: rotateZ(0deg) rotateZ(45deg) rotateX(-70deg);
     -webkit-transform-origin: 50% 100%;
     transform-origin: 50% 100%;
     -webkit-transform-style: preserve-3d;
@@ -912,23 +920,23 @@ button:focus {
 }
 
 .pin--1-2 {
-    top: 41vmin;
-    left: 25vmin;
+    top: 45vmin;
+    left: 20vmin;
 }
 
 .pin--1-3 {
-    top: 26vmin;
+    top: 35vmin;
     left: 20vmin;
 }
 
 .pin--1-4 {
-    top: 16vmin;
-    left: 13vmin;
+    top: 25vmin;
+    left: 20vmin;
 }
 
 .pin--1-5 {
-    top: 6vmin;
-    left: 27vmin;
+    top: 12vmin;
+    left: 20vmin;
 }
 
 .pin--1-6 {
@@ -937,43 +945,43 @@ button:focus {
 }
 
 .pin--1-7 {
-    top: 10vmin;
-    left: 65vmin;
+    top: 15vmin;
+    left: 70vmin;
 }
 
 .pin--1-8 {
-    top: 10vmin;
-    left: 74vmin;
+    top: 15vmin;
+    left: 83vmin;
 }
 
 .pin--1-9 {
-    top: 5vmin;
-    left: 85vmin;
+    top: 30vmin;
+    left: 83vmin;
 }
 
 .pin--1-10 {
-    top: 5vmin;
-    left: 95vmin;
+    top: 15vmin;
+    left: 102vmin;
 }
 
 .pin--1-11 {
-    top: 25vmin;
-    left: 107vmin;
+    top: 30vmin;
+    left: 102vmin;
 }
 
 .pin--1-12 {
-    top: 50vmin;
-    left: 100vmin;
+    top: 45vmin;
+    left: 102vmin;
 }
 
 .pin--1-13 {
-    top: 70vmin;
-    left: 98vmin;
+    top: 65vmin;
+    left: 95vmin;
 }
 
 .pin--1-14 {
-    top: 70vmin;
-    left: 88vmin;
+    top: 60vmin;
+    left: 75vmin;
 }
 
 /* Pins for floor 2 */
