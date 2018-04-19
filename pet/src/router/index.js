@@ -22,7 +22,7 @@ export default new Router({
       component: Index
     },
     {
-      path: '/ele/:id',
+      path: '/ele',
       component: Ele
     },
     {
