@@ -14,7 +14,7 @@
             </div>
           </div>
           <div class="col-md-1 col-md-offset-4">
-            <button class="button button-small button-plain button-border button-circle" id="back">
+            <button class="button button-small button-plain button-border button-circle" id="back" onclick="window.history.back()">
               <i class="glyphicon glyphicon-circle-arrow-left"></i>Back</button>
             <button class="button button-small button-plain button-border button-circle" id="logout" @click="LogoutClicked">
               <i class="glyphicon glyphicon-share"></i>Logout</button>

@@ -19,7 +19,7 @@
       </button>
     </div>
     <div class="col-md-3 col-md-offset-1" style="padding-left: 40px">
-      <button class="button button-plain button-border button-circle button-giant " style="margin-top: 45%" >
+      <button class="button button-plain button-border button-circle button-giant " style="margin-top: 45%" onclick="window.location.href='http://localhost:8000/#/test'">
         <span class="glyphicon glyphicon-list-alt"></span>
         测试
       </button>

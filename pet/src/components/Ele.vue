@@ -1,5 +1,8 @@
 <template>
   <div>
+    <div v-for="step in steps">
+      <h3>{{step}}</h3>
+    </div>
     <p>{{message}}</p>
     <time-down @time-end="message = '计时结束'" :endTime="endTime"></time-down>
     <question :text="text" :options="options"></question>
@@ -32,7 +35,8 @@ export default {
           name:'D',
           text:'选项D'
         }
-      ]
+      ],
+      steps:['1',2]
     }
   }
 }

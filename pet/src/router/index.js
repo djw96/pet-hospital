@@ -8,6 +8,7 @@ import CaseEntity from '@/components/CaseEntity'
 import cosplay from '@/components/cosplay'
 import SpecCase from '@/components/SpecCase'
 import Exam from '@/components/Exam'
+import Test from '@/components/test'
 
 Vue.use(Router)
 
@@ -40,6 +41,10 @@ export default new Router({
     {
       path: '/cosplay',
       component: cosplay
+    },
+    {
+      path: '/test',
+      component: Test
     },
     {
       path: '/exam',

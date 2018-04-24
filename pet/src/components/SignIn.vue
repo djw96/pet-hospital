@@ -38,11 +38,11 @@
           <h2>登录</h2>
           <input type="text" id="username" class="form-control" placeholder="用户名" v-model="LogUser">
           <input type="password" id="password" class="form-control" placeholder="密码" v-model="LogPass">
-          <div class="checkbox">
+          <!-- <div class="checkbox">
             <label>
               <input type="checkbox" value="remember-me"> 记住密码
             </label>
-          </div>
+          </div> -->
           <button class="btn btn-lg btn-primary btn-block" type="button" id="login" @click="LoginClicked">登录</button>
         </form>
 
@@ -144,6 +144,10 @@ export default {
               callback: action => {
                 this.$router.push({ path: '/index' })
               }
+            })
+          } else{
+            this.$alert('用户名或密码错误','登陆提示',{
+              confirmButtonText:'确定',
             })
           }
         })
