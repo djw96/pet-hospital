@@ -9,7 +9,7 @@
 export default {
   created() {
     this.$ajax({
-      url: 'http://localhost:8080/learning/casenav/'+this.$route.params.id,
+      url: 'http://localhost:8080/learning/casenav/' + this.$route.params.id,
       method: 'GET'
     }).then(response => {
       this.caseList = response.data.caseList
@@ -20,7 +20,7 @@ export default {
       caseList: [
         {
           caseName: '骨折',
-          caseID:1
+          caseID: 1
         }
       ]
     }
@@ -28,9 +28,7 @@ export default {
   methods: {
     entityClick(row) {
       this.$router.push({
-        path:
-          '/speccase/' +
-          row.caseID
+        path: '/speccase/' + row.caseID
       })
     }
   }
