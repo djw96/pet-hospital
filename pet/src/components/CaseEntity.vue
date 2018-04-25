@@ -30,15 +30,7 @@ export default {
       this.$router.push({
         path:
           '/speccase/' +
-          row.caseName +
-          '/' +
-          row.exam +
-          '/' +
-          row.symptom +
-          '/' +
-          row.method +
-          '/' +
-          row.result
+          row.caseID
       })
     }
   }

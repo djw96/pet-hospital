@@ -35,7 +35,7 @@ export default new Router({
       component: Case
     },
     {
-      path: '/speccase/:caseName/:exam/:symptom/:method/:result',
+      path: '/speccase/:id',
       component: SpecCase
     },
     {
