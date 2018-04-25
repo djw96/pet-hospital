@@ -9,13 +9,10 @@
 export default {
   created() {
     this.$ajax({
-      url: 'http://localhost:8080/getCaseEntity',
-      method: 'POST',
-      data: this.$qs.stringify({
-        id: this.$route.params.id
-      })
+      url: 'http://localhost:8080/learning/casenav/'+this.$route.params.id,
+      method: 'GET'
     }).then(response => {
-      this.caseList = response.data.caseEntityList
+      this.caseList = response.data.caseList
     })
   },
   data() {
@@ -23,11 +20,7 @@ export default {
       caseList: [
         {
           caseName: '骨折',
-          categoryId: 1,
-          exam: 1,
-          method: 1,
-          result: 1,
-          symptom: 3
+          caseID:1
         }
       ]
     }

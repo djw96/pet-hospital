@@ -73,7 +73,17 @@
                     </ul>
                 </div>
                 <div class="room">
-
+                    <el-table stripe :data="yishiData">
+                        <el-table-column label="工作" prop="function"></el-table-column>
+                        <el-table-column label="操作" prop="operation"></el-table-column>
+                        <el-table-column type="expand">
+                            <template slot-scope="props">
+                                <div v-for="step in props.row.steps">
+                                    <li>{{step}}</li>
+                                </div>
+                            </template>
+                        </el-table-column>
+                    </el-table>
                 </div>
             </div>
         </div>
@@ -86,24 +96,41 @@ export default {
       qiantaiData: [
         {
           function: '接待',
-          operation:'说白了就是打针',
-          steps: ['hello', 'world']
-        },
-        {
-          function: '档案室',
-          operation:'说白了就是打针',
-          steps: ['包括病例档案的合理保存与数据统计等']
+          operation: '接待患者与访客',
+          steps: [
+            '询问来访目的',
+            '若为携带患病宠物就诊，则对患病宠物进行初诊，按协助挂号',
+            '若为一般来访则进行登记，安排访问'
+          ]
         }
       ],
       zhuliData: [
         {
           function: '静脉注射',
-          operation:'说白了就是打针',
+          operation: '把血液、药液、营养液等液体物质直接注射到静脉中',
           steps: [
-            '将备齐用物携至床边，核对，向病人解释，以取得合作.',
-            '趁病人不注意扎进去'
+            '将备齐用物携至床边，核对.',
+            '用注射器吸取药液，排尽空气，套上安瓿.',
+            '选择合适静脉，以手指探明静脉方向及深浅，在穿刺部位的肢体下垫治疗巾或纸巾，在穿刺部位的上方（近心端）约6cm处扎紧止血带，用2%碘酊消毒皮肤，待干后以70%酒精脱碘.',
+            '穿刺时，以左手拇指绷紧静脉下端皮肤，使其固定，右手持注射器，针头斜面向上，针头和皮肤呈35度角，由静脉上方或侧方刺入皮下，再沿静脉方向潜行刺入.',
+            '见回血，证实针头已入静脉，可再顺静脉进针少许，松开止血带，嘱病人松拳，固定针头，缓慢注入药液.',
+            '注射毕，以消毒棉签按压穿刺点，迅速拔出针头,清理用物.'
+          ]
+        },
+        {
+          function: '皮下注射',
+          operation: '将药液注入皮下组织',
+          steps: [
+            '选择注射部位,用2%碘酊和70%酒精进行皮肤消毒，待干.',
+            '将药液吸入注射器，排尽空气，左手绷紧皮肤，右手持注射器，食指固定针栓，针头斜面向上和皮肤呈30度到40度角，过瘦者可捏起注射部位，迅速刺入针头的三分之二，放开左手固定针栓，抽吸无回血，即可推注药液.',
+            '注射完毕，用消毒棉签轻按针刺处，快速拔针，清理用物.'
           ]
         }
+      ],
+      yishiData: [
+          {
+              
+          }
       ]
     }
   },

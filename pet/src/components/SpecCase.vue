@@ -11,12 +11,10 @@
 export default {
   created() {
     this.$ajax({
-      url: 'http://localhost:8080/getCaseResource',
-      method: 'POST',
-      data: this.$qs.stringify({
-        id: this.$route.params.exam
-      })
+      url: 'http://localhost:8080/learning/casedes/'+this.$route.params.id,
+      method: 'GET'
     }).then(response => {
+      // 待修改
       this.caseExam = 'Exam: ' + response.data.caseResource.description
     })
 
