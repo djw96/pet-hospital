@@ -1,7 +1,5 @@
 <template>
   <div id="app">
-    <!-- <img src="./assets/logo.png"> -->
-    <!-- 导航栏 -->
     <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="row">
@@ -10,7 +8,7 @@
           </div>
           <div class="col-md-6">
             <div class="navbar-header">
-              <a class="navbar-brand" href="SignIn.html">虚拟宠物医院学习系统</a>
+              <a class="navbar-brand">虚拟宠物医院学习系统</a>
             </div>
           </div>
           <div class="col-md-1 col-md-offset-4">

@@ -112,30 +112,38 @@ export default {
       } else {
         if (this.PassWord === this.ConfirmPass) {
           this.$ajax({
-            url: 'http://localhost:8080/register',
+            url: 'http://localhost:8080/admin/user',
             method: 'POST',
-            data: this.$qs.stringify({
-              username: this.UserName,
-              password: this.PassWord
-            })
+            data: {
+              userName: this.UserName,
+              userPwd: this.PassWord,
+              userType: '1'
+            }
           }).then(response => {
-            alert(response.data.msg)
+            if (response.data.result) {
+              this.$alert('注册成功', '系统提示', {
+                confirmButtonText: '确定',
+                callback: action => {
+                  this.$router.push({ path: '/' })
+                }
+              })
+            }
           })
         } else alert('两次输入的密码不一致')
       }
     },
     LoginClicked() {
       this.$ajax({
-        url: 'http://localhost:8080/login',
+        url: 'http://localhost:8080/validate',
         method: 'POST',
-        data: this.$qs.stringify({
-          username: this.LogUser,
-          password: this.LogPass
-        })
+        data: {
+          userName: this.LogUser,
+          userPwd: this.LogPass
+        }
       })
         .then(response => {
           console.log(response.data.msg)
-          if (response.data.retCode === '0000') {
+          if (response.data.isValidated === 'true') {
             sessionStorage.setItem('username', this.LogUser)
             document.getElementById('username').value = ''
             document.getElementById('password').value = ''
@@ -145,9 +153,9 @@ export default {
                 this.$router.push({ path: '/index' })
               }
             })
-          } else{
-            this.$alert('用户名或密码错误','登陆提示',{
-              confirmButtonText:'确定',
+          } else {
+            this.$alert('用户名或密码错误', '登陆提示', {
+              confirmButtonText: '确定'
             })
           }
         })

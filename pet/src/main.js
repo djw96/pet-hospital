@@ -8,12 +8,15 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import axios from 'axios'
 import qs from 'qs'
+import YunserUI from 'yunser-ui-vue'
+import 'yunser-ui-vue/dist/yunser-ui.css'
 
 Vue.config.productionTip = false
 Vue.prototype.$ajax = axios
 Vue.prototype.$qs = qs
 
 Vue.use(ElementUI)
+Vue.use(YunserUI)
 Vue.use(Vuex)
 /* eslint-disable no-new */
 new Vue({

@@ -1,8 +1,7 @@
 <template>
   <div class="container" style="margin-left: 10%">
     <div class="page-header">
-      <h1>角色扮演
-        <small id="roleName" style="margin-left:20px">{{role}}</small>
+      <h1 style="font-size: 30px">角色扮演
       </h1>
     </div>
     <div class="tabs">

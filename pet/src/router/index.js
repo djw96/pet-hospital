@@ -9,6 +9,7 @@ import cosplay from '@/components/cosplay'
 import SpecCase from '@/components/SpecCase'
 import Exam from '@/components/Exam'
 import Test from '@/components/test'
+import Te from '@/components/te'
 
 Vue.use(Router)
 
@@ -17,6 +18,10 @@ export default new Router({
     {
       path: '/',
       component: SignIn
+    },
+    {
+      path: '/te',
+      component: Te
     },
     {
       path: '/index',
