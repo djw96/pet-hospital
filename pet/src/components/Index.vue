@@ -3,7 +3,7 @@
     <img src="../assets/img/TnPgXl4.jpg" class="background-img"/>
     <h3 style="color:white;margin:20px 120px;">请选择功能——</h3>
     <div class="col-md-3 col-md-offset-1">
-      <button class="button button-plain button-border button-circle button-giant " style="margin-top: 45%">
+      <button class="button button-plain button-border button-circle button-giant " style="margin-top: 45%" onclick="window.location.href='http://localhost:8000/Interactive3DHospitalMap/index.html'">
         <span class="glyphicon glyphicon-film"></span>
         3  D导览
       </button>

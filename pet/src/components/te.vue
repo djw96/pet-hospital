@@ -122,8 +122,9 @@ Array.prototype.contains = function(obj) {
 export default {
   components: { UiContainer },
   created() {
+    var random = Math.floor(Math.random()*(12-1+1)+1)
     this.$ajax({
-      url: 'http://localhost:8080/admin/question/1',
+      url: 'http://localhost:8080/admin/question/'+random,
       method: 'GET'
     }).then(response => {
       let questions = response.data.data
